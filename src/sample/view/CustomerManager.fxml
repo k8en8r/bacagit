@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="410.0" minWidth="-Infinity" prefHeight="579.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CustomerManager">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <bottom>
+      <HBox BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="5.0" right="40.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="apptMgr" mnemonicParsing="false" onAction="#onApptMgr" prefHeight="26.0" prefWidth="165.0" text="Appointment Scheduler">
+               <HBox.margin>
+                  <Insets left="50.0" right="190.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#onReportsButton" prefHeight="26.0" prefWidth="76.0" text="Reports" />
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#onExitButton" text="Exit">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="556.0" prefWidth="879.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="550.0" prefWidth="879.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <children>
+                  <Label layoutX="397.0" layoutY="16.0" text="Customers">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="allCustomers" layoutX="8.0" layoutY="53.0" prefHeight="154.0" prefWidth="864.0">
+                     <columns>
+                        <TableColumn fx:id="customerIDs" prefWidth="48.0" text="ID" />
+                        <TableColumn fx:id="customerNames" prefWidth="133.0" text="Name" />
+                        <TableColumn fx:id="allAddresses" prefWidth="325.0143737792969" text="Address" />
+                        <TableColumn fx:id="allPostalCodes" prefWidth="127.48556518554688" text="Postal Code" />
+                        <TableColumn fx:id="allPhoneNums" prefWidth="140.69781494140625" text="Phone" />
+                        <TableColumn fx:id="allDivisionIDs" prefWidth="89.75225830078125" text="Division ID" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="newCustomer" layoutX="29.0" layoutY="216.0" mnemonicParsing="false" onAction="#onNewCustomer" text="New" />
+                  <Button fx:id="deleteCustomer" layoutX="796.0" layoutY="216.0" mnemonicParsing="false" onAction="#onDeleteCustomer" prefHeight="26.0" prefWidth="62.0" text="Delete" />
+                  <HBox layoutX="32.0" layoutY="266.0" prefHeight="225.0" prefWidth="821.0">
+                     <children>
+                        <VBox prefHeight="225.0" prefWidth="154.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="69.0" text="ID" />
+                              <Label prefHeight="50.0" prefWidth="61.0" text="Name" />
+                              <Label prefHeight="50.0" prefWidth="57.0" text="Phone" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="225.0" prefWidth="231.0">
+                           <children>
+                              <TextField fx:id="custID" editable="false" prefHeight="1.0" prefWidth="196.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="custName">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="custPhone">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox prefHeight="225.0" prefWidth="118.0">
+                           <children>
+                              <Label />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="119.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="84.0" text="Country" />
+                              <Label prefHeight="50.0" prefWidth="72.0" text="Division" />
+                              <Label prefHeight="50.0" prefWidth="87.0" text="Street Address" />
+                              <Label prefHeight="50.0" prefWidth="87.0" text="Postal Code" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="330.0">
+                           <children>
+                              <ComboBox fx:id="custCountry" onAction="#countrySelection" prefHeight="26.0" prefWidth="299.0">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" top="10.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="custDiv" prefHeight="26.0" prefWidth="300.0">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <TextField fx:id="custAdd">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="custPost" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="saveCustomer" layoutX="419.0" layoutY="479.0" mnemonicParsing="false" onAction="#onSaveCustomer" text="Save" />
+                  <Label fx:id="custAlert" layoutX="29.0" layoutY="25.0" text=" " />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
