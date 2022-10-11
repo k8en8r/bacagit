@@ -5,21 +5,19 @@ to allow users to easily manage their business schedules and customers with thei
 
 ### AUTHOR
 Caitlin Baca
-cbaca16@wgu.edu
 
+cbaca16@wgu.edu
 ### VERSION 
 1
-
 ### DATE
 9/24/2022
-
-#### IDE
+### IDE
 IntelliJ Community 2021.1.3
-#### JDK
+### JDK
 Java SE 17.0.1
-#### JAVAFX
+### JAVAFX
 JavaFX-SDK-17.0.1
-#### MySQL Connector driver
+### MySQL Connector driver
 mysql-connector-java-8.0.25
 
 ## DIRECTIONS FOR USE
