@@ -1,28 +1,28 @@
-# *Scheduling Desktop Application*
+# **Scheduling Desktop Application**
 
-###PURPOSE
+### PURPOSE
 to allow users to easily manage their business schedules and customers with their database.
 
-###AUTHOR
+### AUTHOR
 Caitlin Baca
 cbaca16@wgu.edu
 
-###VERSION 
+### VERSION 
 1
 
-###DATE
+### DATE
 9/24/2022
 
-####IDE
+#### IDE
 IntelliJ Community 2021.1.3
-####JDK
+#### JDK
 Java SE 17.0.1
-####JAVAFX
+#### JAVAFX
 JavaFX-SDK-17.0.1
-####MySQL Connector driver
+#### MySQL Connector driver
 mysql-connector-java-8.0.25
 
-##DIRECTIONS FOR USE
+## DIRECTIONS FOR USE
 - input a correct username and password
 - select an existing appointment to update from the table or enter information below to create a new appointment
 - delete or update selected existing appointment
