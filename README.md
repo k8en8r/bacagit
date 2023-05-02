@@ -1,12 +1,12 @@
 # **Scheduling Desktop Application**
 
 ### PURPOSE
-to allow users to easily manage their business schedules and customers with their database.
+to allow users to easily manage their business schedules and customers within their database.
 
 ### AUTHOR
 Caitlin Baca
 
-cbaca16@wgu.edu
+caitlinbaca4@gmail.com
 ### VERSION 
 1
 ### DATE
